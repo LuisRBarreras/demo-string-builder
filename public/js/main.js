@@ -7,9 +7,9 @@
         'Strawberry'
     ]
 
-    sb.cat('<ul>')
+    sb.cat('<ul id="list-items" >')
         .each(listItems, function(item, index) {
-            this.wrap('<li>', '</li>')
+            this.wrap('<li id="item-' + (index+1) + '">', '</li>')
                 .cat((index+1) + ". " + item)
                 .end()
         })
